@@ -8,11 +8,12 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +1 index.htm
+badd +22 index.htm
+badd +0 WebsiteRawContent.txt
 argglobal
 silent! argdel *
 argadd index.htm
-edit index.htm
+edit WebsiteRawContent.txt
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -28,12 +29,12 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 60 - ((49 * winheight(0) + 25) / 50)
+let s:l = 2 - ((1 * winheight(0) + 25) / 50)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-60
-normal! 07|
+2
+normal! 015|
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf

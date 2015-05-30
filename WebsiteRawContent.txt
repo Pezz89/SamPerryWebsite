@@ -1,0 +1,17 @@
+About me                    > Summary
+Hi! I'm Sam. A 
+
+About me                    > Coding                            > Python
+About me                    > Coding                            > C++
+About me                    > Coding                            > UNIX
+About me                    > Coding                            > Vim
+About me                    > Coding                            > HTML
+About me                    > Music                             > Main content
+About me                    > Motorbike                         > Main content
+Professional Experience     > IRCAM                             > Main Content
+Portfolio                   > FYP: Audio descriptor framework
+Portfolio                   > Python/matlab filter module
+Portfolio                   > VSTi Synth
+Portfolio                   > VST Delay effect
+Portfolio                   > This Website
+
