@@ -8,12 +8,14 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +45 index.htm
-badd +38 WebsiteRawContent.txt
+badd +1 index.htm
+badd +8 mainstyle.css
+badd +13 normalize.css
+badd +32 ~/.vimrc
 argglobal
 silent! argdel *
 argadd index.htm
-edit WebsiteRawContent.txt
+edit index.htm
 set splitbelow splitright
 set nosplitbelow
 set nosplitright

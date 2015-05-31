@@ -3,58 +3,149 @@
     <head>
         <meta charset="UTF-8">
         <title>Sam Perry - Main Page</title>
+        <link href="normalize.css" rel="stylesheet">
+        <link href="mainstyle.css" rel="stylesheet">
     </head>
     <body>
-        <header>
-            <h1>Sam Perry</h1>
-        </header>
-
         <nav>
+            <img class="circular" src="resources/ProfilePic.jpg" alt="Profile Picture">
             <ul>
                 <li>About Me</li>
-                <li>Portfolio</li>
                 <li>Professional Experience</li>
+                <li>Portfolio</li>
             </ul>
         </nav>
+        <div id="maincontent">
+            <header>
+                <h1>Sam Perry</h1>
+            </header>
 
-        <section id="aboutMe">
-            <h2>About Me</h2>
-            <p>Insert summary here</p>
-            <div id="interests">
-                <h3>Interests</h3>
-                <div id="coding">
-                    <h4>Coding</h4>
+
+            <article id="aboutMe">
+                <h2>About Me</h2>
+                <p>
+                    Hi! I'm Sam. An aspiring programmer/DSP engineer. I made this website to show some of the projects that 
+                    I've completed or am currently working on and as a place to document some of my key skills and interests. 
+                    I hope to expand the website as I gain experience in my field but for now I have put together a selection 
+                    of some of the work I have created over the past few years whilst at University and working at my 
+                    placement in Paris. Enjoy!
+                </p>
+
+                <div id="interests">
+                    <h3>Interests</h3>
+                    <div id="coding">
+                        <h4>Coding</h4>
+                        <div id="python">
+                            <h5>Python</h5>
+                            <p>
+                                I have around a year's experience working in python and find it's simple syntax perfect for 
+                                quickly prototyping ideas and is one of my primary means for developing DSP based programs. 
+                                During my time at the IRCAM research institute I used Python extensively on a number of 
+                                different tasks to perform audio analysis and synthesis related processes. Though I mainly 
+                                worked in Python 2 I am also familiar with Python 3. I am also familiar with packages such as 
+                                Numpy, SciPy and Matplotlib.
+                                Check out some of the projects I have worked on in python here!
+                            </p>
+                        </div>
+
+                        <div id="unix">
+                            <h5>Unix</h5>
+                            <p>
+                                Having worked almost exclusively on Mac and Linux for a number of years I am very familiar with 
+                                the Unix environment. I have recently begun to experiment with creating shell scripts to help 
+                                automate processes I perform regularly. The best example of my understanding of Unix would be to 
+                                check out my source repository here. It demonstrates how I have used shell scripts to automate 
+                                the process of setting up a new machine with the environment as I need it.
+                            </p>
+                        </div>
+
+                        <div id="cplusplus">
+                            <h5>C++</h5>
+                            <p>
+                                I have used C++ to create audio effects using the Steinberg VST framework as part of coursework 
+                                for my degree. I have also experimented with creating simple standalone command line tools. 
+                                I like the language for it's high performance when compared to python (due to the compiled nature 
+                                of the language) though I currently tend to work less in this language as I find it less flexible 
+                                for quickly prototyping my ideas. I plan on improving my skills in this language when I feel that 
+                                one of my projects has reached a point where it would benefit from being converted to a compiled 
+                                language.
+                            </p>
+                        </div>
+
+                        <div id="vim">
+                            <h5>Vim</h5> 
+                            <p>
+                                My editor of choice is Vim and have been using it for around a year. I feel the main advantage is 
+                                that it is a widely available editor due to it's age and its exceptional ability to be adaptable 
+                                to all different languages through customization. This allows me to develop in the same environment 
+                                with modifications to create an IDE style workspace tailored to each task.If you are interested my 
+                                Vim configurations can be found here.
+                            </p>
+                        </div>
+
+                        <div id="webdesign">
+                            <h5>Web Design</h5>
+                            <p>
+                                I recently became interested in coding a website as a side project to improve my skills in an area 
+                                that I am much less familiar with. This has resulted in the website you are looking at now! I thought 
+                                it would be beneficial to teach myself something not totally unrelated to my aspirations but enough 
+                                to give me a different challenge to apply the new skills I have acquired over the past few years to. 
+                                As a result I am now familiar with HTML5, CSS and understand the basics of JavaScript (though I feel 
+                                this would not be difficult to build upon given my experience in Python). 
+                            </p>
+                        </div>
+                    </div>
+                    <div id="music">
+                        <h4>Music</h4>
+                        <p>
+                            I have always enjoyed writing and playing music. As a child I was taught the Piano and continue to 
+                            practice as a hobby in my spare time. Through studying Music Technology at university I have had the 
+                            opportunity to expand on my understanding of Music and how computers and signal processing techniques 
+                            can be applied creatively to design and manipulate sounds. I also have a good understanding of music 
+                            recording techniques and industry standards for recording instruments in a music studio environment. 
+                            Although I hope to progress primarily in a technical industry where logic is key, I feel the slightly 
+                            less conventional path I have taken to reach my current position will provide me with a different 
+                            perspective on tasks than that of a standard computer science graduate, for example.
+                        </p>
+                    </div>
+                    <div id="motorbikes">
+                        <h4>Motorbikes</h4>
+                    </div>
                 </div>
-                <div id="music">
-                    <h4>Music</h4>
+            </article>
+
+            <article id="profExper">
+                <h2>Professional Experience</h2>
+                <p>Summary of professional experience </p>
+                <div id="ircam">
+                    <h4>IRCAM</h4>
+                    <p>
+                        IRCAM has has been my first experience in a professional working environment. During my time there I gained an 
+                        understanding of how teams work togeather to produce professional products and participated in the development 
+                        of such products. My ability to write readable and stable code was important when contributing to projects and 
+                        my knowlege of Unix, Git, VIM, Python, C++ etc... grew substantially during my time there. I also learnt how to 
+                        work on a project alongside other member of the team and due to the wide variety of projects that I was tasked 
+                        with improving, my ability to adapt to tasks where I did not have prior experience improved dramatically. An 
+                        example of this could be when I was tasked with fixing a reveal.js prsentation. A simple task but in a language 
+                        (or 3, HTML, CSS and JavaScript) that I had never used before. I think this ability to adapt to a given 
+                        situation is important in a rapidly changing industry.
+                    </p>
                 </div>
-                <div id="motorbikes">
-                    <h4>Motorbikes</h4>
-                </div>
-            </div>
-        </section>
+            </article>
 
-        <section id="profExper">
-            <h2>Professional Experience</h2>
-            <p>Summary of professional experience </p>
-            <div id="ircam">
-                <h4>IRCAM</h4>
-                <p>Summary of experience at IRCAM</p>
-            </div>
-        </section>
+            <article id="portfolio">
+                <h2>Portfolio</h2>
+                <p>Summary of portfolio</p>
+                <h4>Audio descriptor framework</h4>
+                <h4>Python/matlab filter module</h4>
+                <h4>VSTi Synth</h4>
+                <h4>VST Delay effect</h4>
+                <h4>This Website</h4>
+            </article>
 
-        <section id="portfolio">
-            <h2>Portfolio</h2>
-            <p>Summary of portfolio</p>
-            <h4>Audio descriptor framework</h4>
-            <h4>Python/matlab filter module</h4>
-            <h4>VSTi Synth</h4>
-            <h4>VST Delay effect</h4>
-            <h4>This Website</h4>
-        </section>
-
-        <footer>
-            <p><small>Copyright &copy; Sam Perry</small></p>
-        </footer>
+            <footer>
+                <p><small>Copyright &copy; Sam Perry</small></p>
+            </footer>
+        </div>
     </body>
 </html>

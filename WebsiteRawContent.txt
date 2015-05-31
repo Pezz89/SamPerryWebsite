@@ -31,6 +31,7 @@ Needs more...
 Professional Experience     > IRCAM                             > Main Content
 IRCAM has has been my first experience in a professional working environment. During my time there I gained an understanding of how teams work togeather to produce professional products and participated in the development of such products. My ability to write readable and stable code was important when contributing to projects and my knowlege of Unix, Git, VIM, Python, C++ etc... grew substantially during my time there. I also learnt how to work on a project alongside other member of the team and due to the wide variety of projects that I was tasked with improving, my ability to adapt to tasks where I did not have prior experience improved dramatically. An example of this could be when I was tasked with fixing a reveal.js prsentation. A simple task but in a language (or 3, HTML, CSS and JavaScript) that I had never used before. I think this ability to adapt to a given situation is important in a rapidly changing industry.
 
+Portfolio                   > Summary of portfolio
 Portfolio                   > FYP: Audio descriptor framework
 Portfolio                   > Python/matlab filter module
 Portfolio                   > VSTi Synth
