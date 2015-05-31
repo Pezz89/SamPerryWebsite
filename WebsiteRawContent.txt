@@ -1,14 +1,31 @@
 About me                    > Summary
-Hi! I'm Sam. A 
+Hi! I'm Sam. An aspiring programmer/DSP engineer. I made this website to show some of the projects that I've completed or am currently working on and as a place to document some of my key skills and interests. I hope to expand the website as I gain experience in my field but for now I have put together a selection of some of the work I have created over the past few years whilst at University and working at my placement in Paris. Enjoy!
+
+Highly motivated with a keen interest in furthering knowledge and understanding of programming and DSP techniques.
+Proven to be able to adapt to a variety of tasks and situations, and to work in a professional manner to produce high quality results.
+Looking for opportunities to build on current experience in programming and DSP related fields and to help develop products and services in these areas.
 
 About me                    > Coding                            > Python
+I have around a year's experience working in python and find it's simple syntax perfect for quickly prototyping ideas and is one of my primary means for developing DSP based programs. During my time at the IRCAM research institute I used Python extensively on a number of different tasks to perform audio analysis and synthesis related processes. Though I mainly worked in Python 2 I am also familiar with Python 3. I am also familiar with packages such as Numpy, SciPy and Matplotlib.
+Check out some of the projects I have worked on in python here!
+
 About me                    > Coding                            > C++
+I have used C++ to create audio effects using the Steinberg VST framework as part of coursework for my degree. I have also experimented with creating simple standalone command line tools. I like the language for it's high performance when compared to python (due to the compiled nature of the language) though I currently tend to work less in this language as I find it less flexible for quicly prototyping my ideas. I plan on improving my skills in this language when I feel that one of my projects has reached a point where it would benefit from being converted to a compiled language.
+
 About me                    > Coding                            > UNIX
+Having worked almost exclusively on Mac and Linux for a number of years I am very familiar with the Unix enviroment. I have recently begun to experiment with creating shell scripts to help automate processes I perform regularly. The best example of my understanding of Unix would be to check out my source repository here. It demonstrates how I have used shell scripts to automate the process of setting up a new machine with the enviroment as I need it.
+
 About me                    > Coding                            > Vim
+My editor of choice is Vim and have been using it for around a year. I feel the main advantage is that it is a widely available editor due to it's age and its exceptional ability to be adaptable to all different languages through customization. This allows me to develop in the same enviroment with modifications to create an IDE style workspace taylored to each task.If you are interested my Vim configurations can be found here.
+
 About me                    > Coding                            > HTML
+I recently became interested in coding a website as a side project to improve my skills in an area that I am much less familiar with. 
+
 About me                    > Music                             > Main content
 About me                    > Motorbike                         > Main content
 Professional Experience     > IRCAM                             > Main Content
+Worked on a range of DSP related projects and tasks for the Analysis and Synthesis team. Modified and improved a number of programs, primarily in Python, with particular focus on vocal and musical processing. Also worked on Unix and in C++.
+
 Portfolio                   > FYP: Audio descriptor framework
 Portfolio                   > Python/matlab filter module
 Portfolio                   > VSTi Synth
