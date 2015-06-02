@@ -1,0 +1,120 @@
+html, body {
+    height: 100%;
+    line-height: 1.375;
+}
+
+h5 {
+    margin: 0;
+    padding: 1.67em 0 1.67em 2em;
+    background-color: LightGray;
+}
+
+header {
+    height: 30em;
+    width: 100%;
+    background-color: gray;
+    top: 0
+}
+
+header > h1 {
+    margin: 0;
+    padding: 1em
+}
+
+article {
+    padding: 1em;
+    margin: 0 auto;
+    max-width: 42em
+}
+
+footer {
+    padding: 1.5em;
+    background-color: gray;
+}
+
+nav {
+    position: fixed;
+    width: 20%;
+    min-height: 100%;
+    right: 0;
+    float: right;
+    background-color: #6f5499;
+    margin: 0;
+    padding: 0;
+}
+
+nav > ul {
+    padding: 2em 0em 2em 0;
+    margin: 0
+}
+
+nav > ul > li {
+    padding: 0.5em 2em;
+    list-style-type: none;
+}
+
+nav > ul > li.active {
+    background-color: #8565B8
+}
+
+div#maincontent {
+    position: relative;
+    width: 80%;
+    margin: 0;
+    padding: 0
+}
+/*A bit of a hack to fix the jquery slide toggle*/
+div#panel {
+    border: 1px solid transparent;
+}
+
+p {
+    margin: 0
+}
+
+img#profilePic {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 1em;
+    max-width: 150px;
+    max-height: 150px;
+}
+
+nav > div#imgDiv {
+    padding: 0 1em 0 1em
+}
+
+.circular {
+    border-radius: 150px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+}
+
+/* unvisited link */
+a:link {
+    color: #FF0000;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* selected link */
+a:active {
+    color: #ffffff;
+    text-decoration: none;
+}
+

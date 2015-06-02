@@ -8,20 +8,22 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +1 index.htm
-badd +8 mainstyle.css
-badd +13 normalize.css
-badd +32 ~/.vimrc
+badd +40 index.htm
+badd +28 SmoothScroll.js
+badd +81 style.css
 argglobal
 silent! argdel *
 argadd index.htm
-edit index.htm
+argadd mainstyle.css
+argadd SmoothScroll.js
+edit SmoothScroll.js
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
 wincmd t
 set winheight=1 winwidth=1
 argglobal
+edit SmoothScroll.js
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -31,11 +33,11 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 25) / 50)
+let s:l = 25 - ((14 * winheight(0) + 11) / 23)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
+25
 normal! 0
 tabnext 1
 if exists('s:wipebuf')
@@ -48,7 +50,9 @@ if file_readable(s:sx)
   exe "source " . fnameescape(s:sx)
 endif
 let &so = s:so_save | let &siso = s:siso_save
-doautoall SessionLoadPost
+let g:this_session = v:this_session
 let g:this_obsession = v:this_session
+let g:this_obsession_status = 2
+doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :
