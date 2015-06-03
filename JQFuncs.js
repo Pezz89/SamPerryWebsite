@@ -1,7 +1,36 @@
 // Scroll smoothly between html anchors
 // Taken from: http://codepen.io/mattsince87/pen/exByn
+
+function updateMagicLine($el, $magicLine) {
+
+    topPos = $el.position().top;
+    newHeight = $el.parent().outerHeight();
+    $magicLine.animate({
+        top: topPos,
+        height : newHeight
+    });
+}
+
 function scrollNav() {
     
+    var $el, 
+        leftPos, 
+        newWidth, 
+        $mainNav = $("#navLinks");
+
+    $mainNav.append("<li id='magic-line'></li>");
+    var $magicLine = $("#magic-line");
+
+    $magicLine
+        .height($(".active").height())
+        .css("top", $(".active a").position().top)
+        .data("origLeft", $magicLine.position().top)
+        .data("origHeight", $magicLine.height());
+
+    $("#navLinks li a").click(function() {
+        updateMagicLine($(this), $magicLine);
+    });
+
     $('.nav a').click(function(){  
         //Toggle Class
         $(".active").removeClass("active");      
@@ -40,6 +69,7 @@ function scrollNav() {
             var divHeight = $(theID).outerHeight(); // get the height of the div in question
             if (windowPos >= divPos && windowPos < (divPos + divHeight)) {
                 $("a[href='" + theID + "']").closest('li').addClass("active");
+                updateMagicLine($("a[href='" + theID + "']"), $magicLine);
             } else {
                 $("a[href='" + theID + "']").closest('li').removeClass("active");
             }
@@ -64,34 +94,10 @@ function showHide() {
 }
 
 function highlightDiv() {
-    var $el, 
-        leftPos, 
-        newWidth, 
-        $mainNav = $("#navLinks");
-
-    $mainNav.append("<li id='magic-line'></li>");
-    var $magicLine = $("#magic-line");
-
-    $magicLine
-        .height($(".active").height())
-        .css("top", $(".active a").position().top)
-        .data("origLeft", $magicLine.position().top)
-        .data("origHeight", $magicLine.height());
-
-    $("#navLinks li a").click(function() {
-        $el = $(this);
-        topPos = $el.position().top;
-        newHeight = $el.parent().height();
-        $magicLine.animate({
-            top: topPos,
-            height : newHeight
-        });
-    });
 }
 
 //Make sure document is ready before executing javascript
 $(document).ready(function() {
     scrollNav();
     showHide();
-    highlightDiv();
 });
