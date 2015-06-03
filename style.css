@@ -9,6 +9,11 @@ h5 {
     background-color: LightGray;
 }
 
+article {
+    margin: 0;
+    padding: 0;
+}
+
 header {
     height: 30em;
     width: 100%;
@@ -48,13 +53,13 @@ nav > ul {
     margin: 0
 }
 
-nav > ul > li {
+nav > ul > li > a {
     padding: 0.5em 2em;
-    list-style-type: none;
+    display: block;
 }
 
-nav > ul > li.active {
-    background-color: #8565B8
+nav > ul > li {
+    list-style-type: none;
 }
 
 div#maincontent {
@@ -116,5 +121,12 @@ a:hover {
 a:active {
     color: #ffffff;
     text-decoration: none;
+}
+
+#magic-line {
+    width: 100%;
+    position: absolute;
+    background: #8565B8;
+    z-index: -1;
 }
 

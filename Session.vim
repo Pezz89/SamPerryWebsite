@@ -8,22 +8,22 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +40 index.htm
-badd +28 SmoothScroll.js
-badd +81 style.css
+badd +144 index.htm
+badd +40 JQFuncs.js
+badd +15 style.css
 argglobal
 silent! argdel *
 argadd index.htm
-argadd mainstyle.css
-argadd SmoothScroll.js
-edit SmoothScroll.js
+argadd JQFuncs.js
+argadd style.css
+edit JQFuncs.js
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
 wincmd t
 set winheight=1 winwidth=1
 argglobal
-edit SmoothScroll.js
+edit JQFuncs.js
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -33,11 +33,11 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 25 - ((14 * winheight(0) + 11) / 23)
+let s:l = 1 - ((0 * winheight(0) + 23) / 46)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-25
+1
 normal! 0
 tabnext 1
 if exists('s:wipebuf')

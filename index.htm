@@ -6,7 +6,7 @@
         <link href="normalize.css" rel="stylesheet">
         <link href="style.css" rel="stylesheet">
         <script src="jquery-1.11.3.js" type="text/javascript"></script>
-        <script src="SmoothScroll.js" type="text/javascript"></script>
+        <script src="JQFuncs.js" type="text/javascript"></script>
     </head>
 
     <body>
@@ -15,7 +15,7 @@
             <div id="imgDiv">
                 <img id="profilePic" class="circular" src="resources/ProfilePic.jpg" alt="Profile Picture">
             </div>
-            <ul>
+            <ul id="navLinks">
                 <li class="active">
                     <a id="link1" href="#aboutMe" class="nav-aboutMe">About Me</a>
                 </li>
@@ -33,9 +33,8 @@
                 <h1>Sam Perry</h1>
             </header>
 
-
-            <article>
-                <h2 id="aboutMe">About Me</h2>
+            <article id="aboutMe" >
+                <h2 class="anchor">About Me</h2>
                 <p>
                     Hi! I'm Sam. An aspiring programmer/DSP engineer. I made this website to show some of the projects that 
                     I've completed or am currently working on and as a place to document some of my key skills and interests. 
@@ -141,7 +140,7 @@
                 </div>
             </article>
 
-            <article id="profExper">
+            <article id="profExper" class="anchor">
                 <h2>Professional Experience</h2>
                 <p>Summary of professional experience </p>
                 <div id="ircam">
@@ -162,7 +161,7 @@
                 </div>
             </article>
 
-            <article id="portfolio">
+            <article id="portfolio" class="anchor">
                 <h2>Portfolio</h2>
                 <p>Summary of portfolio</p>
                 <h4>Audio descriptor framework</h4>
