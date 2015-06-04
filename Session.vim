@@ -8,9 +8,9 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +144 index.htm
-badd +40 JQFuncs.js
-badd +15 style.css
+badd +166 index.htm
+badd +7 JQFuncs.js
+badd +128 style.css
 argglobal
 silent! argdel *
 argadd index.htm
@@ -33,12 +33,12 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 61 - ((12 * winheight(0) + 23) / 46)
+let s:l = 1 - ((0 * winheight(0) + 23) / 46)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-61
-normal! 029|
+1
+normal! 0
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf

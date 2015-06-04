@@ -1,11 +1,10 @@
 // Scroll smoothly between html anchors
 // Taken from: http://codepen.io/mattsince87/pen/exByn
 
-function updateMagicLine($el, $magicLine) {
-
-    topPos = $el.position().top;
-    newHeight = $el.parent().outerHeight();
-    $magicLine.animate({
+function updateMagicLine($li, $magicLine) {
+    topPos = $li.position().top;
+    newHeight = $li.parent().outerHeight();
+    $magicLine.stop().animate({
         top: topPos,
         height : newHeight
     });
@@ -17,21 +16,17 @@ function scrollNav() {
         leftPos, 
         newWidth, 
         $mainNav = $("#navLinks");
-
+    //Add a list item to the navigation to act as the highlight bar
     $mainNav.append("<li id='magic-line'></li>");
     var $magicLine = $("#magic-line");
 
     $magicLine
-        .height($(".active").height())
+        .height($(".active").outerHeight())
         .css("top", $(".active a").position().top)
-        .data("origLeft", $magicLine.position().top)
-        .data("origHeight", $magicLine.height());
+        .data("origLeft", $magicLine.position().left)
+        .data("origHeight", $magicLine.outerHeight());
 
     $("#navLinks li a").click(function() {
-        updateMagicLine($(this), $magicLine);
-    });
-
-    $('.nav a').click(function(){  
         //Toggle Class
         $(".active").removeClass("active");      
         $(this).closest('li').addClass("active");
@@ -41,6 +36,7 @@ function scrollNav() {
         $('html, body').stop().animate({
             scrollTop: $( $(this).attr('href') ).offset().top 
         }, 400);
+        updateMagicLine($(this), $magicLine);
         return false;
     });
     $('.scrollTop a').scrollTop();
@@ -50,6 +46,7 @@ function scrollNav() {
      * We use the scroll functionality again, some array creation and 
      * manipulation, class adding and class removing, and conditional testing
      */
+    var prevDivPos = null;
     var aChildren = $("nav li").children(); // find the a children of the list items
     var aArray = []; // create the empty aArray
     for (var i=0; i < aChildren.length; i++) {    
@@ -60,16 +57,20 @@ function scrollNav() {
     
     $(window).scroll(function(){
         var windowPos = $(window).scrollTop(); // get the offset of the window from the top of page
-        var windowHeight = $(window).height(); // get the height of the window
-        var docHeight = $(document).height();
+        var windowHeight = $(window).outerHeight(); // get the height of the window
+        var docHeight = $(document).outerHeight();
         
         for (var i=0; i < aArray.length; i++) {
             var theID = aArray[i];
             var divPos = $(theID).offset().top; // get the offset of the div from the top of page
             var divHeight = $(theID).outerHeight(); // get the height of the div in question
-            if (windowPos >= divPos && windowPos < (divPos + divHeight)) {
+            if (windowPos + (windowHeight / 3)>= divPos && windowPos + (windowHeight / 3) < (divPos + divHeight)) {
                 $("a[href='" + theID + "']").closest('li').addClass("active");
-                updateMagicLine($("a[href='" + theID + "']"), $magicLine);
+                if (divPos != prevDivPos) {
+                    console.log(divPos, prevDivPos);
+                    updateMagicLine($(".active a"), $magicLine);
+                    prevDivPos = divPos;
+                }
             } else {
                 $("a[href='" + theID + "']").closest('li').removeClass("active");
             }
