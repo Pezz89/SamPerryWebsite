@@ -7,6 +7,12 @@ h5 {
     margin: 0;
     padding: 1.67em 0 1.67em 2em;
     background-color: LightGray;
+    border: 1px solid DarkGray;
+}
+
+div#coding > div > div {
+    background-color: #E8E8E8;
+    padding: 1.67em;
 }
 
 article {
@@ -16,9 +22,10 @@ article {
 
 header {
     height: 30em;
-    width: 100%;
+    width: 80%;
     background-color: gray;
-    top: 0
+    top: 0;
+    z-index: -100;
 }
 
 header > h1 {
@@ -46,6 +53,7 @@ nav {
     background-color: #6f5499;
     margin: 0;
     padding: 0;
+    z-index: 0;
 }
 
 nav > ul {
@@ -66,7 +74,8 @@ div#maincontent {
     position: relative;
     width: 80%;
     margin: 0;
-    padding: 0
+    padding: 0;
+    z-index: 0;
 }
 /*A bit of a hack to fix the jquery slide toggle*/
 div#panel {
@@ -81,13 +90,12 @@ img#profilePic {
     margin-left: auto;
     margin-right: auto;
     display: block;
-    margin-top: 1em;
     max-width: 150px;
     max-height: 150px;
 }
-
-nav > div#imgDiv {
-    padding: 0 1em 0 1em
+span#imgDiv {
+    padding: 0 1em 0 1em;
+    float: right;
 }
 
 .circular {
@@ -101,7 +109,7 @@ nav > div#imgDiv {
 
 /* unvisited link */
 a:link {
-    color: #FF0000;
+    color: #ffffff;
     text-decoration: none;
 }
 
