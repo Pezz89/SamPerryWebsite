@@ -2,10 +2,6 @@
 // Taken from: http://codepen.io/mattsince87/pen/exByn
 
 function updateMagicLine($li, $magicLine) {
-    if ($magicLine.filter(':animated').length > 0) {
-        return false;
-    }
-    active = true;
     topPos = $li.position().top;
     newHeight = $li.parent().outerHeight();
     $magicLine.stop().animate({
@@ -15,7 +11,6 @@ function updateMagicLine($li, $magicLine) {
 }
 
 function scrollNav() {
-    
     var $el, 
         leftPos, 
         newWidth, 
@@ -30,16 +25,13 @@ function scrollNav() {
         .data("origLeft", $magicLine.position().left)
         .data("origHeight", $magicLine.outerHeight());
 
+    var clickRunning = false;
     $("#navLinks li a").click(function() {
-        //Toggle Class
-        $(".active").removeClass("active");      
-        $(this).closest('li').addClass("active");
-        var theClass = $(this).attr("class");
-        $('.'+theClass).parent('li').addClass('active');
-        //Animate
+        clickRunning = true;
+        //Animate smooth scrolling to section
         $('html, body').stop().animate({
             scrollTop: $( $(this).attr('href') ).offset().top 
-        }, 400);
+        }, 400, function(){clickRunning = false;});
         updateMagicLine($(this), $magicLine);
         return false;
     });
@@ -71,7 +63,9 @@ function scrollNav() {
             if (windowPos + (windowHeight / 3)>= divPos && windowPos + (windowHeight / 3) < (divPos + divHeight)) {
                 $("a[href='" + theID + "']").closest('li').addClass("active");
                 if (divPos != prevDivPos) {
-                    updateMagicLine($(".active a"), $magicLine);
+                    if (!clickRunning) {
+                        updateMagicLine($(".active a"), $magicLine);
+                    }
                     prevDivPos = divPos;
                 }
             } else {
