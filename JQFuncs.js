@@ -2,11 +2,15 @@
 // Taken from: http://codepen.io/mattsince87/pen/exByn
 
 function updateMagicLine($li, $magicLine) {
+    if ($magicLine.filter(':animated').length > 0) {
+        return false;
+    }
+    active = true;
     topPos = $li.position().top;
     newHeight = $li.parent().outerHeight();
     $magicLine.stop().animate({
         top: topPos,
-        height : newHeight
+        height: newHeight
     });
 }
 
@@ -67,7 +71,6 @@ function scrollNav() {
             if (windowPos + (windowHeight / 3)>= divPos && windowPos + (windowHeight / 3) < (divPos + divHeight)) {
                 $("a[href='" + theID + "']").closest('li').addClass("active");
                 if (divPos != prevDivPos) {
-                    console.log(divPos, prevDivPos);
                     updateMagicLine($(".active a"), $magicLine);
                     prevDivPos = divPos;
                 }
