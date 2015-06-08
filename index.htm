@@ -7,6 +7,7 @@
         <link href="style.css" rel="stylesheet">
         <script src="jquery-1.11.3.js" type="text/javascript"></script>
         <script src="JQFuncs.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="font-awesome-4.3.0/css/font-awesome.min.css">
     </head>
 
     <body>
@@ -51,11 +52,24 @@
                 <div id="interests">
                     <h3>Interests</h3>
 
-                    <div id="coding">
+                    <div id="coding" class="infoBox">
                         <h4>Coding</h4>
+                        <div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna 
+                                aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut 
+                                aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, 
+                                vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum 
+                                zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil 
+                                imperdiet doming id quod mazim placerat facer possim assum.
+                            </p>
+                        </div>
 
-                        <div id="python">
-                            <h5 class="showhide">Python</h5>
+                        <div id="python" class="showhide">
+                            <div class="heading">
+                                <h5>Python</h5>
+                                <span class="plusminus"><i class='fa fa-plus'></i></span>
+                            </div>
                             <div class="panel">
                                 <p>
                                     I have around a year's experience working in python and find it's simple syntax perfect for 
@@ -69,8 +83,11 @@
                             </div>
                         </div>
 
-                        <div id="unix">
-                            <h5 class="showhide">Unix</h5>
+                        <div id="unix" class="showhide">
+                            <div class="heading">
+                                <h5>Unix</h5>
+                                <span class="plusminus"><i class='fa fa-plus'></i></span>
+                            </div>
                             <div class="panel">
                                 <p>
                                     Having worked almost exclusively on Mac and Linux for a number of years I am very familiar with 
@@ -82,36 +99,45 @@
                             </div>
                         </div>
 
-                        <div id="cplusplus">
-                            <h5 class="showhide">C++</h5>
-                                <div class="panel">
-                                    <p>
-                                        I have used C++ to create audio effects using the Steinberg VST framework as part of coursework 
-                                        for my degree. I have also experimented with creating simple standalone command line tools. 
-                                        I like the language for it's high performance when compared to python (due to the compiled nature 
-                                        of the language) though I currently tend to work less in this language as I find it less flexible 
-                                        for quickly prototyping my ideas. I plan on improving my skills in this language when I feel that 
-                                        one of my projects has reached a point where it would benefit from being converted to a compiled 
-                                        language.
-                                    </p>
-                                </div>
+                        <div id="cplusplus" class="showhide">
+                            <div class="heading">
+                                <h5>C++</h5>
+                                <span class="plusminus"><i class='fa fa-plus'></i></span>
+                            </div>
+                            <div class="panel">
+                                <p>
+                                    I have used C++ to create audio effects using the Steinberg VST framework as part of coursework 
+                                    for my degree. I have also experimented with creating simple standalone command line tools. 
+                                    I like the language for it's high performance when compared to python (due to the compiled nature 
+                                    of the language) though I currently tend to work less in this language as I find it less flexible 
+                                    for quickly prototyping my ideas. I plan on improving my skills in this language when I feel that 
+                                    one of my projects has reached a point where it would benefit from being converted to a compiled 
+                                    language.
+                                </p>
+                            </div>
                         </div>
 
-                        <div id="vim">
-                            <h5 class="showhide">Vim</h5> 
-                                <div class="panel">
-                                    <p>
-                                        My editor of choice is Vim and have been using it for around a year. I feel the main advantage is 
-                                        that it is a widely available editor due to it's age and its exceptional ability to be adaptable 
-                                        to all different languages through customization. This allows me to develop in the same environment 
-                                        with modifications to create an IDE style workspace tailored to each task.If you are interested my 
-                                        Vim configurations can be found here.
-                                    </p>
-                                </div>
+                        <div id="vim" class="showhide">
+                            <div class="heading">
+                                <h5>Vim</h5> 
+                                <span class="plusminus"><i class='fa fa-plus'></i></span>
+                            </div>
+                            <div class="panel">
+                                <p>
+                                    My editor of choice is Vim and have been using it for around a year. I feel the main advantage is 
+                                    that it is a widely available editor due to it's age and its exceptional ability to be adaptable 
+                                    to all different languages through customization. This allows me to develop in the same environment 
+                                    with modifications to create an IDE style workspace tailored to each task.If you are interested my 
+                                    Vim configurations can be found here.
+                                </p>
+                            </div>
                         </div>
 
-                        <div id="webdesign">
-                            <h5 class="showhide">Web Design</h5>
+                        <div id="webdesign" class="showhide">
+                            <div class="heading">
+                                <h5>Web Design - HTML5, CSS and JavaScript</h5>
+                                <span class="plusminus"><i class='fa fa-plus'></i></span>
+                            </div>
                             <div class="panel">
                                 <p>
                                     I recently became interested in coding a website as a side project to improve my skills in an area 
@@ -124,9 +150,10 @@
                             </div>
                         </div>
                     </div>
-                    <div id="music">
-                        <h4 class="showhide">Music</h4>
-                        <div class="panel">
+                    <br>
+                    <div id="music" class="infoBox">
+                        <h4>Music</h4>
+                        <div>
                             <p>
                                 I have always enjoyed writing and playing music. As a child I was taught the Piano and continue to 
                                 practice as a hobby in my spare time. Through studying Music Technology at university I have had the 
@@ -139,18 +166,31 @@
                             </p>
                         </div>
                     </div>
-                    <div id="motorbikes">
+                    <br>
+                    <div id="motorbikes" class="infoBox">
                         <h4>Motorbikes</h4>
+                        <div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna 
+                                aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut 
+                                aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, 
+                                vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum 
+                                zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil 
+                                imperdiet doming id quod mazim placerat facer possim assum.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </article>
 
             <article id="profExper" class="anchor">
-                <h2>Professional Experience</h2>
+                <div class="heading">
+                    <h2>Professional Experience</h2>
+                </div>
                 <p>Summary of professional experience </p>
-                <div id="ircam">
-                    <h4 class="showhide">IRCAM</h4>
-                    <div class="panel">
+                <div id="ircam" class="infoBox">
+                    <h4>IRCAM</h4>
+                    <div>
                         <p>
                             IRCAM has has been my first experience in a professional working environment. During my time there I gained an 
                             understanding of how teams work togeather to produce professional products and participated in the development 
@@ -169,63 +209,120 @@
             <article id="portfolio" class="anchor">
                 <h2>Portfolio</h2>
                 <p>Summary of portfolio</p>
-                <h4>Audio descriptor framework</h4>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna 
-                    aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut 
-                    aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, 
-                    vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum 
-                    zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil 
-                    imperdiet doming id quod mazim placerat facer possim assum.
-                </p>
-                <h4>Python/matlab filter module</h4>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna 
-                    aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut 
-                    aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, 
-                    vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum 
-                    zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil 
-                    imperdiet doming id quod mazim placerat facer possim assum.
-                </p>
-                <h4>VSTi Synth</h4>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna 
-                    aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut 
-                    aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, 
-                    vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum 
-                    zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil 
-                    imperdiet doming id quod mazim placerat facer possim assum.
-                </p>
-                <h4>VST Delay effect</h4>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna 
-                    aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut 
-                    aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, 
-                    vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum 
-                    zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil 
-                    imperdiet doming id quod mazim placerat facer possim assum.
-                </p>
-                <h4>This Website</h4>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna 
-                    aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut 
-                    aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, 
-                    vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum 
-                    zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil 
-                    imperdiet doming id quod mazim placerat facer possim assum.
-                </p>
+                <div class="infoBox showhide">
+                    <div class="heading">
+                        <h4>Audio descriptor framework (3rd Year University Project)</h4>
+                        <span class="plusminus"><i class='fa fa-plus'></i></span>
+                    </div>
+                    <div class="panel">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna 
+                            aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut 
+                            aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, 
+                            vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum 
+                            zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil 
+                            imperdiet doming id quod mazim placerat facer possim assum.
+                        </p>
+                    </div>
+                </div>
+                <div class="infoBox showhide">
+                    <div class="heading">
+                        <h4>iTunes Rating App (Personal Project)</h4>
+                        <span class="plusminus"><i class='fa fa-plus'></i></span>
+                    </div>
+                    <div class="panel">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna 
+                            aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut 
+                            aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, 
+                            vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum 
+                            zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil 
+                            imperdiet doming id quod mazim placerat facer possim assum.
+                        </p>
+                    </div>
+                </div>
+                <div class="infoBox showhide">
+                    <div class="heading">
+                        <h4>Python/matlab filter module (3rd Year University Project)</h4>
+                        <span class="plusminus"><i class='fa fa-plus'></i></span>
+                    </div>
+                    <div class="panel">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna 
+                            aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut 
+                            aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, 
+                            vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum 
+                            zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil 
+                            imperdiet doming id quod mazim placerat facer possim assum.
+                        </p>
+                    </div>
+                </div>
+                <div class="infoBox showhide">
+                    <div class="heading">
+                        <h4>VSTi Synth (2nd Year University Project)</h4>
+                        <span class="plusminus"><i class='fa fa-plus'></i></span>
+                    </div>
+                    <div class="panel">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna 
+                            aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut 
+                            aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, 
+                            vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum 
+                            zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil 
+                            imperdiet doming id quod mazim placerat facer possim assum.
+                        </p>
+                    </div>
+                </div>
+                <div class="infoBox showhide">
+                    <div class="heading">
+                        <h4>VST Delay effect (2nd Year University Project)</h4>
+                        <span class="plusminus"><i class='fa fa-plus'></i></span>
+                    </div>
+                    <div class="panel">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna 
+                            aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut 
+                            aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, 
+                            vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum 
+                            zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil 
+                            imperdiet doming id quod mazim placerat facer possim assum.
+                        </p>
+                    </div>
+                </div>
+                <div class="infoBox showhide">
+                    <div class="heading">
+                        <h4>This Website</h4>
+                        <span class="plusminus"><i class='fa fa-plus'></i></span>
+                    </div>
+                    <div class="panel">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna 
+                            aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut 
+                            aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, 
+                            vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum 
+                            zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil 
+                            imperdiet doming id quod mazim placerat facer possim assum.
+                        </p>
+                    </div>
+                </div>
             </article>
 
             <article id="contactMe" class="anchor">
-                <h2>Contact Me</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna 
-                    aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut 
-                    aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, 
-                    vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum 
-                    zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil 
-                    imperdiet doming id quod mazim placerat facer possim assum.
-                </p>
+                <div class="infoBox">
+                    <div class="heading">
+                        <h2>Contact Me</h2>
+                    </div>
+                    <div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna 
+                            aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut 
+                            aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, 
+                            vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum 
+                            zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil 
+                            imperdiet doming id quod mazim placerat facer possim assum.
+                        </p>
+                    </div>
+                </div>
             </article>
 
             <footer>

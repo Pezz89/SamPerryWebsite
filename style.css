@@ -5,14 +5,21 @@ html, body {
 
 h5 {
     margin: 0;
-    padding: 1.67em 0 1.67em 2em;
     background-color: LightGray;
-    border: 1px solid DarkGray;
 }
 
-div#coding > div > div {
-    background-color: #E8E8E8;
-    padding: 1.67em;
+.infoBox > h4 {
+    padding: 1em 0 1em 1.67em;
+}
+
+
+p {
+    margin: 0;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
 }
 
 article {
@@ -26,11 +33,6 @@ header {
     background-color: gray;
     top: 0;
     z-index: -100;
-}
-
-header > h1 {
-    margin: 0;
-    padding: 1em
 }
 
 article {
@@ -56,6 +58,11 @@ nav {
     z-index: 0;
 }
 
+header > h1 {
+    margin: 0;
+    padding: 1em
+}
+
 nav > ul {
     padding: 2em 0em 2em 0;
     margin: 0
@@ -77,13 +84,10 @@ div#maincontent {
     padding: 0;
     z-index: 0;
 }
+
 /*A bit of a hack to fix the jquery slide toggle*/
 div#panel {
     border: 1px solid transparent;
-}
-
-p {
-    margin: 0
 }
 
 img#profilePic {
@@ -98,37 +102,62 @@ span#imgDiv {
     float: right;
 }
 
-.circular {
-    border-radius: 150px;
-    -webkit-border-radius: 150px;
-    -moz-border-radius: 150px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+.infoBox > h4 {
+    background-color: LightGray;
+    margin: 0;
 }
 
-/* unvisited link */
-a:link {
-    color: #ffffff;
-    text-decoration: none;
+div.infoBox > div > p{
+    background-color: #E8E8E8;
+    padding: 1.67em;
 }
 
-/* visited link */
-a:visited {
-    color: #ffffff;
-    text-decoration: none;
+.showhide > div.heading {
+    background-color: LightGray;
+    margin: 0;
+    overflow: hidden;
 }
 
-/* mouse over link */
-a:hover {
-    color: #ffffff;
-    text-decoration: none;
+.showhide > div.heading > h4, h5 {
+    display: inline-block;
+    padding: 1em 0 1em 2em;
+    margin-top: auto;
+    margin-bottom: auto;
+    vertical-align: middle;
 }
 
-/* selected link */
-a:active {
-    color: #ffffff;
-    text-decoration: none;
+.plusminus {
+    float: right;
+    display: inline-block;
+    padding: 0em 1em 0em 0em;
+    font-size: 1.66em;
+}
+
+.plusminus > i {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.fa-plus {
+    color: white;
+  text-shadow:
+   -1px -1px 0 DarkGray,  
+    1px -1px 0 DarkGray,
+    -1px 1px 0 DarkGray,
+     1px 1px 0 DarkGray;
+}
+.fa-minus {
+    color: white;
+      text-shadow:
+   -1px -1px 0 DarkGray,  
+    1px -1px 0 DarkGray,
+    -1px 1px 0 DarkGray,
+     1px 1px 0 DarkGray;
+}
+
+div.infoBox > div > div > p {
+    background-color: #E8E8E8;
+    padding: 1.67em;
 }
 
 #magic-line {
@@ -138,3 +167,11 @@ a:active {
     z-index: -1;
 }
 
+.circular {
+    border-radius: 150px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+}

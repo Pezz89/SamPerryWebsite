@@ -83,19 +83,36 @@ function scrollNav() {
     });
 }
 
+//Toggle plus/minus icon
+function iconToggle(showhideDiv) {
+    event.preventDefault();
+    showhideDiv.toggleClass("open");
+    var icon = showhideDiv.find(".plusminus");
+    if (showhideDiv.hasClass("open")) {
+        icon.html("<i class='fa fa-minus'></i>");
+    }
+    else {
+        icon.html("<i class='fa fa-plus'></i>");
+    }
+}
+
 //Toggle smoothly revealing/hiding divs
 function showHide() {
     $(".showhide").click(function(){
-        var parentDiv = $(this).parent("div");
-        parentDiv.find(".panel").slideToggle("slow");
+        $(this).find(".panel").slideToggle("slow");
+        iconToggle($(this));
+        
     });
 }
 
-function highlightDiv() {
+function hideByDefault() {
+    /*Hide all collapsable panels by default*/
+    $(".panel").css("display", "none");
 }
 
 //Make sure document is ready before executing javascript
 $(document).ready(function() {
     scrollNav();
     showHide();
+    hideByDefault();
 });
