@@ -1,5 +1,18 @@
 // Scroll smoothly between html anchors
 // Taken from: http://codepen.io/mattsince87/pen/exByn
+function varyScrollSpeed(){
+  var boxes = $('[data-scroll-speed]'),
+      $window = $(window);
+  $window.on('scroll', function(){
+    var scrollTop = $window.scrollTop();
+    boxes.each(function(){
+      var $this = $(this),
+          scrollspeed = parseInt($this.data('scroll-speed')),
+          val = - scrollTop / scrollspeed;
+      $this.css('transform', 'translateY(' + val + 'px)');
+    });
+  });
+}
 
 function updateMagicLine($li, $magicLine) {
     topPos = $li.position().top;
@@ -37,14 +50,9 @@ function scrollNav() {
     });
     $('.scrollTop a').scrollTop();
 
-    /**
-     * This part handles the highlighting functionality.
-     * We use the scroll functionality again, some array creation and 
-     * manipulation, class adding and class removing, and conditional testing
-     */
     var prevDivPos = null;
     var aChildren = $("nav li").children(); // find the a children of the list items
-    var aArray = []; // create the empty aArray
+    var aArray = []; // create the empty array
     for (var i=0; i < aChildren.length; i++) {    
         var aChild = aChildren[i];
         var ahref = $(aChild).attr('href');
@@ -115,4 +123,5 @@ $(document).ready(function() {
     scrollNav();
     showHide();
     hideByDefault();
+    varyScrollSpeed();
 });

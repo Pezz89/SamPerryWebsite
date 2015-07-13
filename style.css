@@ -3,6 +3,17 @@ html, body {
     line-height: 1.375;
 }
 
+@font-face{
+    font-family: "OpenSans";
+    src: url('./resources/Open_Sans/OpenSans-Regular.ttf'),
+    url('./resources/Open_Sans/OpenSans-Regular.ttf'); /* IE */
+}
+
+* {
+    font-family: "OpenSans";
+    /*font-size: 104%;*/
+}
+
 h5 {
     margin: 0;
     background-color: LightGray;
@@ -28,11 +39,28 @@ article {
 
 header {
     position: relative;
-    height: 30em;
+    height: 20em;
     width: 80%;
-    background-color: gray;
+    background-color: #002b36;
     top: 0;
     z-index: -100;
+}
+
+.mainHeader{
+    color: white;
+    font-size: 3em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    text-shadow:2px 2px black; 
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-bottom: 0.15em;
+    background-color: rgba(7, 54, 66, 0.8);
+}
+#headerDiv {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin: 0;
 }
 
 article {
@@ -53,9 +81,16 @@ nav {
     right: 0;
     top: -20px;
     float: right;
-    background-color: #6f5499;
+    background-color: #002b36;
     margin: 0;
     padding: 0;
+}
+
+#magic-line {
+    width: 100%;
+    position: absolute;
+    background: #073642;
+    z-index: -10;
 }
 
 .shadow{
@@ -69,10 +104,6 @@ nav {
     box-shadow: inset 5px 0px 25px 2px;
 }
 
-header > h1 {
-    margin: 0;
-    padding: 1em
-}
 
 nav > ul {
     padding: 2em 0em 2em 0;
@@ -92,6 +123,7 @@ div#maincontent-container {
     width: 100%;
     box-shadow: -10px -5px 25px 20px white;
     z-index: 10;
+    background-color: white;
 }
 div#maincontent {
     position: relative;
@@ -99,6 +131,7 @@ div#maincontent {
     margin: 0;
     padding: 0;
     z-index: 10;
+    background-color: white;
 }
 
 /*A bit of a hack to fix the jquery slide toggle*/
@@ -176,13 +209,6 @@ div.infoBox > div > div > p {
     padding: 1.67em;
 }
 
-#magic-line {
-    width: 100%;
-    position: absolute;
-    background: #8565B8;
-    z-index: -10;
-}
-
 .circular {
     border-radius: 150px;
     -webkit-border-radius: 150px;
@@ -190,4 +216,12 @@ div.infoBox > div > div > p {
     box-shadow: 0 0 8px rgba(0, 0, 0, .8);
     -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
     -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+}
+
+.coverDiv {
+    top: 0;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    z-index: -101;
 }
